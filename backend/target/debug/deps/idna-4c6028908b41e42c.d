@@ -1,0 +1,10 @@
+/Users/edward.barnes@glean.co/Code/Playground/word-of-the-day/backend/target/debug/deps/libidna-4c6028908b41e42c.rmeta: /Users/edward.barnes@glean.co/.cargo/registry/src/index.crates.io-6f17d22bba15001f/idna-1.0.3/src/lib.rs /Users/edward.barnes@glean.co/.cargo/registry/src/index.crates.io-6f17d22bba15001f/idna-1.0.3/src/deprecated.rs /Users/edward.barnes@glean.co/.cargo/registry/src/index.crates.io-6f17d22bba15001f/idna-1.0.3/src/punycode.rs /Users/edward.barnes@glean.co/.cargo/registry/src/index.crates.io-6f17d22bba15001f/idna-1.0.3/src/uts46.rs
+
+/Users/edward.barnes@glean.co/Code/Playground/word-of-the-day/backend/target/debug/deps/libidna-4c6028908b41e42c.rlib: /Users/edward.barnes@glean.co/.cargo/registry/src/index.crates.io-6f17d22bba15001f/idna-1.0.3/src/lib.rs /Users/edward.barnes@glean.co/.cargo/registry/src/index.crates.io-6f17d22bba15001f/idna-1.0.3/src/deprecated.rs /Users/edward.barnes@glean.co/.cargo/registry/src/index.crates.io-6f17d22bba15001f/idna-1.0.3/src/punycode.rs /Users/edward.barnes@glean.co/.cargo/registry/src/index.crates.io-6f17d22bba15001f/idna-1.0.3/src/uts46.rs
+
+/Users/edward.barnes@glean.co/Code/Playground/word-of-the-day/backend/target/debug/deps/idna-4c6028908b41e42c.d: /Users/edward.barnes@glean.co/.cargo/registry/src/index.crates.io-6f17d22bba15001f/idna-1.0.3/src/lib.rs /Users/edward.barnes@glean.co/.cargo/registry/src/index.crates.io-6f17d22bba15001f/idna-1.0.3/src/deprecated.rs /Users/edward.barnes@glean.co/.cargo/registry/src/index.crates.io-6f17d22bba15001f/idna-1.0.3/src/punycode.rs /Users/edward.barnes@glean.co/.cargo/registry/src/index.crates.io-6f17d22bba15001f/idna-1.0.3/src/uts46.rs
+
+/Users/edward.barnes@glean.co/.cargo/registry/src/index.crates.io-6f17d22bba15001f/idna-1.0.3/src/lib.rs:
+/Users/edward.barnes@glean.co/.cargo/registry/src/index.crates.io-6f17d22bba15001f/idna-1.0.3/src/deprecated.rs:
+/Users/edward.barnes@glean.co/.cargo/registry/src/index.crates.io-6f17d22bba15001f/idna-1.0.3/src/punycode.rs:
+/Users/edward.barnes@glean.co/.cargo/registry/src/index.crates.io-6f17d22bba15001f/idna-1.0.3/src/uts46.rs:
