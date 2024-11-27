@@ -10,7 +10,7 @@ function Home() {
   return (
     <div className="p-6 flex flex-col justify-center items-center">
       <Typography variant="h2" className="mb-4">
-        What level are you at?
+        Choose your learning level!
       </Typography>
       <div className="grid grid-cols-2 gap-4">
         {WOTDLevelMap.map((level) => (

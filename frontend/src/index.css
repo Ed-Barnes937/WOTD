@@ -32,7 +32,9 @@
 }
 
 @theme {
-  --font-display: "Satoshi";
+  --default-font-family: "Quicksand";
+  /* --default-font-family:"Andika"; */
+  /* --default-font-family:"Indie Flower"; */
 
   /* Shadcn UI */
   --color-mint-green: oklch(83.66% 0.125 176.45);

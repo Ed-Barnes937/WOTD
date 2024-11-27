@@ -6,7 +6,7 @@ import {
 import { dummyWords } from "../components/Pages/WOTD/dummyWords";
 
 const randNum = () => {
-    const numWords = 12;
+    const numWords = dummyWords.length;
     return Math.floor(Math.random() * numWords);
 };
 
@@ -19,7 +19,9 @@ export const fetchWOTD = () => {
             return {
                 word: word,
                 meanings: data[0].meanings,
-                colour: colour > 6 ? "bg-pink-500" : "bg-teal-500",
+                colour: colour > dummyWords.length / 2
+                    ? "bg-pink-500"
+                    : "bg-teal-500",
             };
         });
 };
