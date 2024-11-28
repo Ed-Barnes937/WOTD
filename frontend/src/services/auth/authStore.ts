@@ -2,6 +2,7 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import supabase from "../supabase";
 import { type Provider, User } from "@supabase/supabase-js";
+import { redirect } from "@tanstack/react-router";
 
 interface AuthState {
     user: User | null;
@@ -69,15 +70,15 @@ export const authLoader = async () => {
         await initialize();
     }
 
-    // // If still no user, redirect to login
-    // if (!user) {
-    //     throw redirect({
-    //         to: "/login",
-    //         search: {
-    //             redirect: location.href,
-    //         },
-    //     });
-    // }
+    // If still no user, redirect to login
+    if (!user) {
+        throw redirect({
+            to: "/",
+            search: {
+                redirect: location.href,
+            },
+        });
+    }
 
     return { user };
 };
