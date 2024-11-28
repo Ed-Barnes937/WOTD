@@ -1,4 +1,4 @@
-import { Typography } from "../../Typography";
+import { Typography } from "../../Shared/Typography";
 
 type WordDefinitionProps = {
   wordType: string;

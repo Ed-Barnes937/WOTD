@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Typography } from "../components/Typography";
+import { Typography } from "../components/Shared/Typography";
 import { LevelCard, WOTDLevelMap } from "../components/Pages/Home/LevelCard";
 
 export const Route = createFileRoute("/")({

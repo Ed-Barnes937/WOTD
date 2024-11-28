@@ -7,7 +7,7 @@ import {
   Lightbulb,
   type LucideIcon,
 } from "lucide-react";
-import { Typography } from "../../Typography";
+import { Typography } from "../../Shared/Typography";
 import { Link } from "@tanstack/react-router";
 
 export const WOTDLevelMap = [

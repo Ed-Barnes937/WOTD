@@ -4,7 +4,7 @@ import { WOTD } from "./WOTD";
 import { WOTDDefinition } from "./WOTDDefinition";
 import { WOTDSentence } from "./WOTDSentence";
 import clsx from "clsx";
-import { Button } from "../../Button";
+import { Button } from "../../Shared/Button";
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 
