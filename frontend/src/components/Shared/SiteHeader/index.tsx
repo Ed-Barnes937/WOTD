@@ -3,17 +3,13 @@ import { Typography } from "../Typography";
 import { Button } from "../Button";
 import { Link } from "@tanstack/react-router";
 import { Avatar } from "../Avatar";
-import { useUser } from "../../../hooks/useUser";
+import { useAuthStore } from "../../../services/auth/authStore";
 
-type SiteHeaderProps = {
-  loginCallback: () => void;
-  logoutCallback: () => void;
-};
-export const SiteHeader = ({
-  loginCallback,
-  logoutCallback,
-}: SiteHeaderProps) => {
-  const user = useUser();
+export const SiteHeader = () => {
+  const user = useAuthStore((store) => store.user);
+  const login = useAuthStore((store) => store.login);
+  const logout = useAuthStore((store) => store.logout);
+
   return (
     <>
       <div className="relative flex flex-row justify-center h-16 p-2 gap-2 items-center">
@@ -32,14 +28,14 @@ export const SiteHeader = ({
         <div className="absolute right-4 flex gap-2">
           {user ? (
             <>
-              <Button variant={"secondary"} onClick={logoutCallback}>
+              <Button variant={"secondary"} onClick={logout}>
                 {/* <Link to="/logout">Login</Link> */}
                 Logout
               </Button>
               <Avatar variant={"rounded"} url={user.user_metadata.avatar_url} />
             </>
           ) : (
-            <Button variant={"secondary"} onClick={loginCallback}>
+            <Button variant={"secondary"} onClick={() => login("google")}>
               {/* <Link to="/login">Login</Link> */}
               Login
             </Button>

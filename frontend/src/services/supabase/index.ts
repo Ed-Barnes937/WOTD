@@ -1,13 +1,13 @@
 import supabase from "./client";
 import { Provider, type User } from "@supabase/supabase-js";
 
-interface AuthService {
+interface SupabaseService {
     signInWithSSO: (provider: Provider) => Promise<void>;
     signOut: () => Promise<void>;
     getCurrentUser: () => Promise<User | null>;
 }
 
-const AuthService: AuthService = {
+const SupabaseService: SupabaseService = {
     async signInWithSSO(provider: Provider) {
         try {
             const { error } = await supabase.auth.signInWithOAuth({
@@ -46,4 +46,4 @@ const AuthService: AuthService = {
     },
 };
 
-export default AuthService;
+export default SupabaseService;

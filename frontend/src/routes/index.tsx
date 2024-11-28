@@ -1,14 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Typography } from "../components/Shared/Typography";
 import { LevelCard, WOTDLevelMap } from "../components/Pages/Home/LevelCard";
-import { useUser } from "../hooks/useUser";
+import { useAuthStore } from "../services/auth/authStore";
 
 export const Route = createFileRoute("/")({
   component: Home,
 });
 
 function Home() {
-  const user = useUser();
+  const user = useAuthStore((store) => store.user);
 
   return (
     <div className="p-6 flex flex-col justify-center items-center">
