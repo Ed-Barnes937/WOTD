@@ -54,6 +54,9 @@ export const LevelCard = ({ level }: LevelCardProps) => {
       `}
       to="/wotd"
       from="/"
+      search={{
+        level,
+      }}
     >
       {/* Background Sparkles */}
       <Sparkles
