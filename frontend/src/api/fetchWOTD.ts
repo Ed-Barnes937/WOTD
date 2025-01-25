@@ -1,46 +1,6 @@
-import {
-    queryOptions,
-    useMutation,
-    useQueryClient,
-} from "@tanstack/react-query";
-import { dummyWords } from "../components/Pages/WOTD/dummyWords";
+import supabase from "../services/supabase/client";
+import { buildQueryOpts } from "@supabase-cache-helpers/postgrest-react-query";
 
-const randNum = () => {
-    const numWords = dummyWords.length;
-    return Math.floor(Math.random() * numWords);
-};
+export const buildWOTDQuery = () => supabase.from("todaywords").select("*");
 
-export const fetchWOTD = () => {
-    const word = dummyWords[randNum()];
-    const colour = randNum();
-    return fetch("https://api.dictionaryapi.dev/api/v2/entries/en/" + word)
-        .then((res) => res.json())
-        .then((data) => {
-            return {
-                word: word,
-                meanings: data[0].meanings,
-                colour: colour > dummyWords.length / 2
-                    ? "bg-pink-500"
-                    : "bg-teal-500",
-            };
-        });
-};
-
-const WOTDQueryKeys = {
-    wotd: "wotd",
-};
-
-export const fetchWOTDQueryOptions = queryOptions({
-    queryKey: [WOTDQueryKeys.wotd],
-    queryFn: fetchWOTD,
-});
-
-export const useWOTDChange = () => {
-    const queryClient = useQueryClient();
-    return useMutation({
-        mutationFn: fetchWOTD,
-        onSuccess: (data) => {
-            queryClient.setQueryData([WOTDQueryKeys.wotd], data);
-        },
-    });
-};
+export const fetchWOTDFromDbQueryOptions = buildQueryOpts(buildWOTDQuery());

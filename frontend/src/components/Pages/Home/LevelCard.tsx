@@ -17,12 +17,13 @@ export const WOTDLevelMap = [
   "expert",
 ] as const;
 
-const WOTDLevelColorMap: Record<(typeof WOTDLevelMap)[number], string> = {
-  beginner: "bg-emerald-500",
-  intermediate: "bg-indigo-500",
-  advanced: "bg-amber-500",
-  expert: "bg-rose-500",
-};
+export const WOTDLevelColorMap: Record<(typeof WOTDLevelMap)[number], string> =
+  {
+    beginner: "bg-emerald-500",
+    intermediate: "bg-indigo-500",
+    advanced: "bg-amber-500",
+    expert: "bg-rose-500",
+  };
 
 const WOTDLevelIconMap: Record<(typeof WOTDLevelMap)[number], LucideIcon> = {
   beginner: Lightbulb,
@@ -32,10 +33,10 @@ const WOTDLevelIconMap: Record<(typeof WOTDLevelMap)[number], LucideIcon> = {
 };
 
 const WOTDLevelDescriptionMap: Record<(typeof WOTDLevelMap)[number], string> = {
-  beginner: "Typically KS1 - Ages 6-8.",
-  intermediate: "Typically KS2 - Ages 8-10.",
-  advanced: "Typically KS3 - Ages 10-12.",
-  expert: "Typically KS4 - Ages 12+.",
+  beginner: "Typically KS1",
+  intermediate: "Typically KS2",
+  advanced: "Typically KS3",
+  expert: "Typically KS4",
 };
 
 interface LevelCardProps {

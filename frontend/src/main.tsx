@@ -12,7 +12,15 @@ import { useAuthStore } from "./services/auth/authStore";
 import { App } from "./App";
 
 // intialise ReactQuery
-export const queryClient = new QueryClient();
+export const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      staleTime: Infinity,
+      gcTime: Infinity,
+    },
+  },
+});
 
 // Create a new router instance
 export const router = createRouter({

@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { fetchWOTDQueryOptions } from "../api/fetchWOTD";
+import { fetchWOTDFromDbQueryOptions } from "../api/fetchWOTD";
 import { WOTDCard } from "../components/Pages/WOTD";
 import { z } from "zod";
 import { WOTDLevelMap } from "../components/Pages/Home/LevelCard";
@@ -13,7 +13,7 @@ export const Route = createFileRoute("/wotd")({
   component: WOTD,
   validateSearch: wotdSearchSchema,
   loader: ({ context }) =>
-    context.queryClient.ensureQueryData(fetchWOTDQueryOptions),
+    context.queryClient.prefetchQuery(fetchWOTDFromDbQueryOptions),
 });
 
 function WOTD() {
@@ -22,7 +22,7 @@ function WOTD() {
   console.log(level);
   return (
     <div className="p-6 flex flex-col justify-center items-center">
-      <WOTDCard />
+      <WOTDCard level={level} />
     </div>
   );
 }
