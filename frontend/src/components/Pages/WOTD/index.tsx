@@ -1,15 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
-import {
-  fetchWOTDFromDbQueryOptions,
-  useWOTDChange,
-} from "../../../api/fetchWOTD";
+import { fetchWOTDFromDbQueryOptions } from "../../../api/fetchWOTD";
 import { WOTD } from "./WOTD";
 import { WOTDDefinition } from "./WOTDDefinition";
 import { WOTDSentence } from "./WOTDSentence";
 import clsx from "clsx";
 import { Button } from "../../Shared/Button";
 import { useState } from "react";
-import { ArrowRight } from "lucide-react";
+// import { ArrowRight } from "lucide-react";
 import type { Database } from "../../../services/supabase/types";
 import { WOTDLevelColorMap } from "../Home/LevelCard";
 
@@ -19,7 +16,6 @@ interface WOTDCardProps {
 
 export const WOTDCard = ({ level }: WOTDCardProps) => {
   const response = useQuery(fetchWOTDFromDbQueryOptions);
-  const mutate = useWOTDChange();
 
   const [showDefinition, setShowDefinition] = useState(true);
   const todaysWords = response.data?.data;
@@ -56,7 +52,7 @@ export const WOTDCard = ({ level }: WOTDCardProps) => {
               <WOTDSentence sentence={wordData[0]?.example_sentence} />
             </div>
           )}
-          <Button
+          {/* <Button
             variant={"ghost"}
             size={"lg"}
             onClick={() => mutate.mutateAsync()}
@@ -64,7 +60,7 @@ export const WOTDCard = ({ level }: WOTDCardProps) => {
           >
             Nah! Give me another!
             <ArrowRight />
-          </Button>
+          </Button> */}
         </>
       )}
     </div>

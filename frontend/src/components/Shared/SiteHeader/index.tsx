@@ -12,7 +12,7 @@ export const SiteHeader = () => {
 
   return (
     <>
-      <div className="relative flex flex-row justify-center h-16 p-2 gap-2 items-center">
+      <div className="relative flex flex-row justify-center h-20 p-2 gap-2 items-center">
         <div className="absolute left-1/2 -translate-x-1/2 text-center">
           <Link to="/">
             <Typography

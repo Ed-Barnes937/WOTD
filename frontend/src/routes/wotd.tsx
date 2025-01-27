@@ -19,7 +19,6 @@ export const Route = createFileRoute("/wotd")({
 function WOTD() {
   const { level } = Route.useSearch();
 
-  console.log(level);
   return (
     <div className="p-6 flex flex-col justify-center items-center">
       <WOTDCard level={level} />
