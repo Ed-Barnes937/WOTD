@@ -1,9 +1,6 @@
-# Word Of the Day
+<h1>
+    WOTD
+</h1>
 
-## Get Started
-- run `docker compose up`
-
-### local frontend development
-- run `docker compose up backend`
-- `cd frontend`
-- `bun run dev`
+`bun install`
+`bun run dev` or `bun run build`
